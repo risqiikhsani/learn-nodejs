@@ -1,0 +1,5 @@
+# Generate a private key (RSA)
+openssl genpkey -algorithm RSA -out private.pem -pkeyopt rsa_keygen_bits:2048
+
+# Generate a public key from the private key
+openssl rsa -pubout -in private.pem -out public.pem
